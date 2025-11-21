@@ -21,10 +21,10 @@ class Research_resp(BaseModel):
     tools_used: list[str]
 
 # LLM Setup
-llm_one = ChatAnthropic(model = "claude-3-5-sonnet-20241022")
+llm_one = ChatAnthropic(model="claude-3-5-sonnet-20241022")
 
 # Take LLM output & parse it into the model to use as a normal python object
-parser = PydanticOutputParser(pydantic_object = Research_resp)
+parser = PydanticOutputParser(pydantic_object=Research_resp)
 
 prompt = ChatPromptTemplate.from_messages(
     [
